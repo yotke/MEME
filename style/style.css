@@ -1,0 +1,384 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+/* HELPERS */
+
+.search-icon {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+
+.search-icon-box {
+    display: flex;
+    justify-content: unset;
+    border-bottom: 0.15rem solid #000;
+    height: 40px;
+}
+
+img {
+    max-width: 230px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hidde {
+    display: none;
+}
+
+a {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+a div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-bar a.active div {
+    box-shadow: inset 0 -3px black;
+    color: black;
+}
+
+.active {
+    color: black;
+}
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+/* HEADER */
+
+.main-header {
+    height: 65px;
+    background-color: rgb(255 127 0);
+}
+
+.header-container {
+    padding: 0 47px;
+    height: 100%;
+}
+
+.logo {
+    align-items: center;
+    height: 30px;
+}
+
+.nav-bar {
+    height: 100%;
+    align-items: center;
+    /* box-shadow: inset 0 -6px #f57d05; */
+}
+
+li {
+    height: 100%;
+}
+
+.nav-bar>* {
+    color: white;
+    padding: 0 5px;
+    font-size: 1.1875rem;
+}
+
+.nav-bar>*:not(:first-child) {
+    border-left: 2px solid #8a8a89;
+}
+
+/* MAIN */
+
+/* SECTION1 */
+
+/* GALLERY */
+
+.search-input-bar {
+    display: flex;
+    height: 105px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 47px;
+}
+#searches-bar{
+    display: flex;
+}
+#searches-bar>*{
+
+    margin: 10px;
+    padding: 15px;
+    background-color: inherit;
+    font-size: 1.5rem;
+    font-family: monospace;
+    border: none;
+}
+#searches-bar>*:hover {
+    transform: rotate(-30deg);
+}
+#meme-search {
+    border: none;
+    font-size: 19px;
+    color: #7a7a7a;
+    font-weight: 500;
+}
+
+.photo-container {
+    background-color: #e3e3e3;
+    padding: 25px 0px 0px 0px;
+}
+
+/* FOOTER */
+
+.footer-container {
+    padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 246px;
+    background-color: #ff7f00;
+}
+
+.color-img {
+    max-width: 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.font-color {
+    padding: 3px;
+    border: none;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    mix-blend-mode: hue;
+}
+
+.main-container img, input {
+    height: unset;
+}
+
+/* EDITOR */
+
+#editor {
+    background-color: #e3e3e3;
+}
+
+.canvas-container {
+    /* align-items: center; */
+    justify-content: center;
+    /* margin: 0 50px; */
+    padding: 30px 47px;
+}
+
+#canvas:hover{
+    cursor:grab;
+    
+}
+
+/* btn */
+
+#canvas-bar {
+    text-align: center;
+    margin: 0 74px;
+}
+
+/* ------------------------------------------ */
+
+#meme-text {
+    width: 100%;
+    padding: 15px;
+    grid-area: input;
+}
+
+/* ------------------------------------------ */
+
+.move-text-up {
+    grid-area: arrows;
+}
+
+#editor input {
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.btn-menu-toggle-hidden{
+    display: none;
+}
+.btn {
+    margin: 15px 10px;
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: none;
+    transition: All 250ms ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: wheat;
+}
+
+#font-kind {
+    align-self: center;
+    margin: 15px 10px;
+    width: 220px;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    text-align: center;
+}
+
+.emoji-container {
+    background-color: white;
+    border-radius: 15px;
+    height: 140px;
+}
+.meme-copy-container{
+    width: 100%;
+}
+.meme-copy-container .btn {
+    color: white;
+    font-size: 0.8rem;
+    width: 110px;
+    background-color: #ff7f00;
+    transition: All 0.3s ease;
+
+}
+
+.meme-copy-container .btn:hover {
+    background-color: #cc6b09;
+    width: 115px;
+}
+
+.color-img {
+    max-width: 57px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+
+.font-color {
+    padding: 5px;
+    border: none;
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    mix-blend-mode: hue;
+}
+
+/* removes default styling from input color element */
+
+::-webkit-color-swatch {
+    border: none;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-moz-color-swatch, ::-moz-focus-inner {
+    border: none;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+}
+
+/* FOOTER */
+
+.footer-container {
+    padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 246px;
+    background-color: #ff7f00;
+}
+
+
+@media (max-width: 800px){
+    .canvas-container{
+        flex-direction: column;
+        gap:10px
+    }
+    
+    .flex.space-between{
+        justify-content: space-between;
+    }
+    .main-layout {
+        padding-right: 1.4rem;
+        padding-left: 1.4rem;
+    }
+
+    .btn-menu-toggle-hidden{
+        display: inline;
+        margin: 5px;
+        font-size: 2rem;
+        position:absolute;
+        background-color: #ff7f00;
+        border: none;
+        color: white;
+        right:0;
+        top:0;
+        
+    }
+    .nav-bar {
+        position: fixed;
+        top: 66px;
+        right: 0;
+        /* margin: 0 auto; */
+        flex-direction: column;
+        min-width: 50%;
+        background-color: rgb(220 220 220 / 90%);
+        height: 100%;
+        box-shadow: 0px 0px 0px transparent;
+        transform: translateX(100%);
+        transition: transform .6s;
+        z-index: 10;
+    }
+    .nav-bar li{
+        width: 100%;
+        background-color: #ff7f00;
+    }
+    
+    .nav-bar a{
+        width: 50%;
+    }
+    body.menu-open .nav-bar {
+        transform: translateX(0);
+        box-shadow: -8px 0px 20px rgb(0 0 0 / 20%);
+    }
+
+}

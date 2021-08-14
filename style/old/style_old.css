@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+/* HELPERS */
+
+.search-icon{
+    max-width: 30px;
+    max-height: 30px;
+}
+.search-icon-box{
+    display: flex;
+    justify-content: unset;
+    border-bottom: 0.15rem solid #000;
+    height: 40px;
+}
+
+img {
+    max-width: 230px;
+    width: 100%;
+    height: 100%;
+}
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hidde {
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    color: black;
+}
+
+
+
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+/* HEADER */
+
+.main-header {
+    height: 65px;
+    background-color: rgb(255 127 0);
+}
+
+.header-container {
+    padding: 0 47px;
+}
+
+
+.logo{
+    align-items: center;
+    height: 30px;
+}
+
+.nav-bar>* {
+    color: white;
+    padding: 0 5px;
+    font-size: 1.1875rem;
+}
+
+.nav-bar>*:not(:first-child) {
+    border-left: 2px solid #8a8a89;
+}
+
+/* MAIN */
+
+/* SECTION1 */
+
+/* GALLERY */
+
+.search-input-bar {
+    display: flex;
+    height: 105px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 47px;
+}
+
+
+#meme-search {
+    border: none;
+    font-size: 19px;
+    color: #7a7a7a;
+    font-weight: 500;
+    /* text-decoration: underline black; */
+}
+
+/* PHOTO CONTAINER */
+
+.photo-container {
+    /* display: flex; */
+    /* flex-grow: ; */
+    /* gap:20px; */
+    background-color: #e3e3e3;
+    padding: 25px 0px 0px 50px;
+}
+.photo-container>*{
+    padding: 5px;
+}
+
+
+
+/* EDITOR */
+
+#editor {
+    background-color: #e3e3e3;
+}
+
+.canvas-container {
+    /* align-items: center; */
+    justify-content: center;
+    /* margin: 0 50px; */
+    padding: 30px 47px;
+}
+
+/* btn */
+
+#canvas-bar {
+    /* display: grid; */
+    text-align: center;
+
+    /* grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(6, 50px);
+    grid-template-areas:
+    "input input input input input" 
+    ". arrows +_btn trash_btn . " 
+    "bg_font sr_font left_b mid_b right_b"
+     "impact impact impact  font_style font_color" 
+     "imoji imoji imoji imoji imoji" 
+     "save . share . download"; */
+    margin: 0 74px;
+    /* height: 100vh; */
+
+}
+/* ------------------------------------------ */
+#meme-text {
+    padding: 15px;
+    grid-area: input;
+}
+/* ------------------------------------------ */
+.move-text-up {
+    grid-area: arrows;
+}
+
+.move-text-down {
+    grid-area: +_btn;
+}
+
+.btn-trash {
+    grid-area: trash_btn;
+}
+/* ------------------------------------------ */
+.btn-font-magnify {
+    grid-area: bg_font;
+}
+
+.btn-font-reduce {
+    grid-area: sr_font;
+}
+
+.move-font-left {
+    grid-area: left_b;
+}
+
+.move-font-middle {
+    grid-area: mid_b;
+}
+
+.move-font-right {
+    grid-area: right_b;
+}
+/* ------------------------------------------ */
+
+
+#font-kind  {
+    grid-area: impact;
+}
+
+.font-style {
+    grid-area: font_style;
+}
+
+
+.font-color {
+    grid-area: font_color;
+}
+/* ------------------------------------------ */
+
+.emoji-container {
+    grid-area: imoji;
+}
+/* ------------------------------------------ */
+
+.save-btn {
+    grid-area: save;
+}
+
+.share-btn {
+    grid-area: save;
+}
+
+.download-btn {
+    grid-area: save;
+}
+/* ------------------------------------------ */
+
+
+
+#editor input {
+    border-radius: 0.5rem;
+    border: none;
+}
+.btn {
+    margin: 15px 10px;
+    width: 56px;
+    height: 56px;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: none;
+    transition: All 250ms ease;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: wheat;
+}
+
+
+
+#font-kind{
+    align-self: center;
+    margin: 15px 10px;
+    width: 220px;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    text-align: center;
+}
+
+
+.emoji-container{
+    background-color: white;
+    border-radius: 15px;
+    height: 140px;
+}
+.meme-copy-container .btn {
+    color: white;
+    font-size: 0.8rem;
+    width: 110px;
+    background-color: #ff7f00;
+}
+.meme-copy-container .btn:hover{
+    background-color: #cc6b09;
+    
+}
+
+/* FOOTER */
+
+.footer-container {
+    padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 246px;
+    background-color: #ff7f00;
+}
+
+
+
+
+.color-img{
+    max-width: 49px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px;
+}
+.font-color { 
+    /* removes default styling from input color element */
+    
+    padding: 3px;
+    border: none; 
+    /* makes input (color swatch) 100% size of container */
+    position: absolute;
+    width: 45px; 
+    height: spx;
+    /* mix blend mode makes the color of the swatch alter the image behind it. */
+    mix-blend-mode: hue; /* try screen, multiply or other blend modes for different effects */
+}
+
+
+
+
+/* removes default styling from input color element */
+::-webkit-color-swatch {
+    border: none;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+    border: none;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+}
+
+
+/* Image Credit */
+a {
+    /* position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #6B6BFF;
+    background: black;
+    display: block;
+    padding: 0 8px 3px;
+    font-size: 15px;
+    text-decoration: none; */
+}
