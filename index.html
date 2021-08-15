@@ -17,7 +17,7 @@
 <body onload="onInit()">
     <header class="main-header">
         <div class="header-container flex align-center space-between">
-            <h1 class="logo"><img class="logo-img" src="LOGO/LOGO.png" alt=""></h1>
+            <div class="logo"><img class="logo-img" src="LOGO/LOGO.png" alt=""></div>
             <ul class="nav-bar flex clean-list">
                 <li class="gallery"><a href="#gallery" name="gallery" class="active" onclick="changeActive(this)">
                         <div>Gallery</div>
@@ -38,7 +38,7 @@
             <div class="search-input-bar">
                 <div class="search-input-container">
                     <div class="search-icon-box">
-                        <input type="text" value="Enter Search keyword" id="meme-search"
+                        <input type="text" value="" placeholder="Enter search keyword" id="meme-search"
                             onchange="setSearchText(this.value)">
                         <img class="search-icon" src="ICONS/search-icon.png" alt="">
 
@@ -52,7 +52,8 @@
                     <button class="books" onclick="onPushSearchesBtn(this)">books</button>
                 </div>
             </div>
-            <div class="photo-container"></div>
+            
+            <div class="photo-container"><div class="add-photo-container"><button class="add-photo-btn">browser</div></button></div>
         </section>
         <section class="canvas-editor hidde" id="editor">
             <div class="canvas-container flex">
@@ -61,7 +62,7 @@
                 <div id="canvas-bar">
                     <!-- <label for="meme-text">Color:</label> -->
                     <div class="text-input">
-                        <input type="text" value="" id="meme-text" onchange="onChangeCanTxtInput(this.value)">
+                        <input type="text" value="" id="meme-text" placeholder="meme text" oninput="drawInputText(this)" onchange="onChangeCanTxtInput(this)">
                     </div>
                     <div class="text-btn-container">
                         <button class="btn move-text-up" onclick="onMoveUp()"><img class="arrows"
@@ -85,7 +86,7 @@
                         <button class="btn move-font-right " onclick="onFontRight()"><img class="right-img"
                                 src="ICONS/align-to-right.png" alt=""></button>
                     </div>
-                    <div class="font-style-container flex ">
+                    <div class="font-style-container flex align-center ">
 
                         <select name="font-kind" id="font-kind">
                             <option value="impact">Impact</option>
@@ -99,7 +100,7 @@
                             <img class="color-img" src="ICONS/paint-board-and-brush.png" alt="">
                         </div>
                     </div>
-                    <div class="emoji-container">emojis</div>
+                    <div class="emoji-container"></div>
                     <div class="meme-copy-container">
                         <button class="btn save-btn" onclick="onSave()">Save</button>
                         <button class="btn share-btn">Share</button>
@@ -116,15 +117,13 @@
         </section>
     </main>
     <footer class="footer-container">
-        <h1 class="logo"><img class="logo-img" src="LOGO/LOGO.png" alt=""></h1>
+        <div class="logo"><img class="logo-img" src="LOGO/LOGO.png" alt=""></div>
         <small class="copy-right">all rights resrved 2021</small>
     </footer>
-
+    <script src="js/emoji.js"></script>
     <script src="js/storage.service.js"></script>
     <script src="js/mouse.event.service.js"></script>
     <script src="js/service.js"></script>
-    <script src="js/control.on.clicked.js"></script>
-    <script src="js/control.render.js"></script>
     <script src="js/main.js"></script>
 
 

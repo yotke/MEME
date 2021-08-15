@@ -12,7 +12,6 @@
     display: flex;
 }
 #searches-bar>*{
-    
     margin: 10px;
     padding: 15px;
     background-color: inherit;
@@ -32,9 +31,24 @@
 
 .photo-container {
     background-color: #e3e3e3;
-    padding: 25px 0px 0px 0px;
+    align-items: center;
+    padding: 25px 0px 0px 37px;
+}
+.photo-container>*{
+    padding: 5px;
 }
 
+.add-photo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-photo-btn{
+    /* background-color: rgb(6, 67, 199); */
+    border: none;
+    margin: 5px;
+    font-size: 3rem;
+}
 /* FOOTER */
 
 .footer-container {
