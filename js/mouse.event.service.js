@@ -2,10 +2,12 @@
 function addListeners() {
     addMouseListeners()
     addTouchListeners()
-    // window.addEventListener('resize', () => {
-    //     resizeCanvas()
-    //     renderCanvas()
-    // })
+    window.addEventListener('resize', () => {
+        resizeCanvas()
+        renderCanvas()
+        renderCleanCanvas();
+        renderTexts();
+    });
 }
 
 function addMouseListeners() {
