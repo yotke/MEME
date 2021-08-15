@@ -4,9 +4,9 @@ function addListeners() {
     addTouchListeners()
     window.addEventListener('resize', () => {
         // resizeCanvas()
-        renderCanvas()
-        renderCleanCanvas();
-        renderTexts();
+        // renderCanvas()
+        // renderCleanCanvas();
+        // renderTexts();
     });
 }
 
