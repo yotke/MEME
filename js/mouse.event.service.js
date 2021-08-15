@@ -20,7 +20,6 @@ function addTouchListeners() {
     gElCanvas.addEventListener('touchend', onUp)
 }
 
-
 function onDown(ev) {
     const pos = getEvPos(ev)
     gIsDown = true;
@@ -61,11 +60,11 @@ function onUp() {
     document.body.style.cursor = 'auto'
 }
 
-// function resizeCanvas() {
-//     const elContainer = document.querySelector('.canvas-container')
-//     gElCanvas.width = elContainer.offsetWidth
-//     gElCanvas.height = elContainer.offsetHeight
-// }
+function resizeCanvas() {
+    const elContainer = document.querySelector('.canvas-container')
+    gElCanvas.width = elContainer.offsetWidth
+    gElCanvas.height = elContainer.offsetHeight
+}
 
 function getEvPos(ev) {
     var pos = {

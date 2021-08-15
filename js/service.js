@@ -114,16 +114,15 @@ function getCurrLine() {
     return gCurrLine;
 }
 
-function getBoderBoxPos(){
+function getBoderBoxPos() {
     return gborderSelected;
 }
 
 
-function getImgByID(id){
-    gImgs.filter(img=>{
-        return img.id===id
+function getImgByID(id) {
+    gImgs.filter(img => {
+        return img.id === id
     });
- 
 }
 
 function updateTextWidth(line, textWidth) {
@@ -134,13 +133,12 @@ function updateTextWidth(line, textWidth) {
 }
 
 
-function setSearchTextService(keywords){
-    var imgs = gImgs.filter(img=>{
-        return img.keywords[0]===keywords;
+function setSearchTextService(keywords) {
+    var imgs = gImgs.filter(img => {
+        return img.keywords[0] === keywords;
     });
-    console.log('imgs',imgs);
-    if(imgs.length===0&&keywords==='')
-        return ;
+    if (imgs.length === 0 && keywords === '')
+        return;
     return imgs;
 }
 
@@ -163,6 +161,10 @@ function setMeme(id, txt = '',) {
     }
 }
 
+function setTextWidth(textWidth, idx) {
+    gMeme.lines[idx].textWidth = textWidth;
+}
+
 
 function insertNewLine(val, pos) {
     var newLine = {
@@ -179,15 +181,14 @@ function insertNewLine(val, pos) {
 }
 
 
-function setTextWidth(textWidth, idx) {
-    gMeme.lines[idx].textWidth = textWidth;
-}
 
 
 function isTextClicked(pos) {
     var lineIdx = gMeme.lines.findIndex(line => {
-        (pos.x >= line.pos.x && pos.x <= line.pos.x + line.textWidth) && (pos.y > line.pos.y - 50 && pos.y < line.pos.y + 50)
-        return (pos.x >= line.pos.x && pos.x <= line.pos.x + line.textWidth) && (pos.y > line.pos.y - 50 && pos.y < line.pos.y + 50)
+        // (pos.x >= line.pos.x && pos.x <= line.pos.x + line.textWidth) &&
+        // (pos.y > line.pos.y - 50 && pos.y < line.pos.y + 50)
+        return (pos.x >= line.pos.x && pos.x <= line.pos.x + line.textWidth) &&
+         (pos.y > line.pos.y - 50 && pos.y < line.pos.y + 50)
 
     });
     if (lineIdx != -1) {
@@ -199,37 +200,28 @@ function isTextClicked(pos) {
     return false;
 }
 
-
-
-
-
-
-
 function SetborderSelectedItem() {
-
     let x1 = gMeme.lines[gCurrLine].pos.x;
-    let x2 = gMeme.lines[gCurrLine].pos.x + gMeme.lines[gCurrLine].textWidth+5;
+    let x2 = gMeme.lines[gCurrLine].pos.x + gMeme.lines[gCurrLine].textWidth + 5;
     let y1 = gMeme.lines[gCurrLine].pos.y + 50;
     let y2 = gMeme.lines[gCurrLine].pos.y - 50;
     let p1 = { x1, y1 }
     let p2 = { x1, y2 }
     let p3 = { x2, y2 }
     let p4 = { x2, y1 }
-    gborderSelected = {p1,p2,p3,p4};
-
+    gborderSelected = { p1, p2, p3, p4 };
 }
 
 // MOVE TEXT TO PLACE + dx dy LOCATION.
 function moveText(dx, dy) {
-    gMeme.lines[gCurrLine].pos.x+=dx;
-    gMeme.lines[gCurrLine].pos.y+=dy;
+    gMeme.lines[gCurrLine].pos.x += dx;
+    gMeme.lines[gCurrLine].pos.y += dy;
 }
 
-function save(){
-    saveToStorage('Memes',gMeme);
+function save() {
+    saveToStorage('Memes', gMeme);
 }
 
-function laod(){
+function laod() {
     loadFromStorage('Memes')
-    
 }

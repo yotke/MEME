@@ -1,0 +1,72 @@
+
+
+
+
+/* HELPERS */
+
+.search-icon {
+    max-width: 15%;
+    max-height: 30px;
+}
+
+.search-icon-box {
+    display: flex;
+    justify-content: unset;
+    border-bottom: 0.15rem solid #000;
+    height: 40px;
+}
+
+img {
+    max-width: 230px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hidde {
+    display: none;
+}
+
+a {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+a div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-bar a.active div {
+    box-shadow: inset 0 -3px black;
+    color: black;
+}
+
+.active {
+    color: black;
+}
+
+/* FLEX */
+
+.flex {
+    display: flex;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}

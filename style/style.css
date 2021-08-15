@@ -7,112 +7,6 @@ body {
     font-family: "Montserrat";
 }
 
-/* HELPERS */
-
-.search-icon {
-    max-width: 30px;
-    max-height: 30px;
-}
-
-
-.search-icon-box {
-    display: flex;
-    justify-content: unset;
-    border-bottom: 0.15rem solid #000;
-    height: 40px;
-}
-
-img {
-    max-width: 230px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.clean-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.hidde {
-    display: none;
-}
-
-a {
-    text-align: center;
-    color: inherit;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
-
-a div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.nav-bar a.active div {
-    box-shadow: inset 0 -3px black;
-    color: black;
-}
-
-.active {
-    color: black;
-}
-
-/* FLEX */
-
-.flex {
-    display: flex;
-}
-
-.flex.align-center {
-    align-items: center;
-}
-
-.flex.space-between {
-    justify-content: space-between;
-}
-
-/* HEADER */
-
-.main-header {
-    height: 65px;
-    background-color: rgb(255 127 0);
-}
-
-.header-container {
-    padding: 0 47px;
-    height: 100%;
-}
-
-.logo {
-    align-items: center;
-    height: 30px;
-}
-
-.nav-bar {
-    height: 100%;
-    align-items: center;
-    /* box-shadow: inset 0 -6px #f57d05; */
-}
-
-li {
-    height: 100%;
-}
-
-.nav-bar>* {
-    color: white;
-    padding: 0 5px;
-    font-size: 1.1875rem;
-}
-
-.nav-bar>*:not(:first-child) {
-    border-left: 2px solid #8a8a89;
-}
 
 /* MAIN */
 
@@ -127,11 +21,12 @@ li {
     justify-content: space-between;
     padding: 0 47px;
 }
-#searches-bar{
+
+#searches-bar {
     display: flex;
 }
-#searches-bar>*{
 
+#searches-bar>* {
     margin: 10px;
     padding: 15px;
     background-color: inherit;
@@ -139,9 +34,11 @@ li {
     font-family: monospace;
     border: none;
 }
+
 #searches-bar>*:hover {
     transform: rotate(-30deg);
 }
+
 #meme-search {
     border: none;
     font-size: 19px;
@@ -199,9 +96,8 @@ li {
     padding: 30px 47px;
 }
 
-#canvas:hover{
-    cursor:grab;
-    
+#canvas:hover {
+    cursor: grab;
 }
 
 /* btn */
@@ -230,9 +126,10 @@ li {
     border: none;
 }
 
-.btn-menu-toggle-hidden{
+.btn-menu-toggle-hidden {
     display: none;
 }
+
 .btn {
     margin: 15px 10px;
     width: 56px;
@@ -263,16 +160,17 @@ li {
     border-radius: 15px;
     height: 140px;
 }
-.meme-copy-container{
+
+.meme-copy-container {
     width: 100%;
 }
+
 .meme-copy-container .btn {
     color: white;
     font-size: 0.8rem;
     width: 110px;
     background-color: #ff7f00;
     transition: All 0.3s ease;
-
 }
 
 .meme-copy-container .btn:hover {
@@ -286,7 +184,6 @@ li {
     border-radius: 10px;
     margin: 15px;
 }
-
 
 .font-color {
     padding: 5px;
@@ -328,31 +225,33 @@ li {
 }
 
 
-@media (max-width: 800px){
-    .canvas-container{
+
+@media (max-width: 700px) {
+    /* .text-btn-container{
+        height: 50%;
+        width: 50%;
+    } */
+    .canvas-container {
         flex-direction: column;
-        gap:10px
+        gap: 10px
     }
-    
-    .flex.space-between{
+    .flex.space-between {
         justify-content: space-between;
     }
     .main-layout {
         padding-right: 1.4rem;
         padding-left: 1.4rem;
     }
-
-    .btn-menu-toggle-hidden{
+    .btn-menu-toggle-hidden {
         display: inline;
         margin: 5px;
         font-size: 2rem;
-        position:absolute;
+        position: absolute;
         background-color: #ff7f00;
         border: none;
         color: white;
-        right:0;
-        top:0;
-        
+        right: 0;
+        top: 0;
     }
     .nav-bar {
         position: fixed;
@@ -368,17 +267,15 @@ li {
         transition: transform .6s;
         z-index: 10;
     }
-    .nav-bar li{
+    .nav-bar li {
         width: 100%;
         background-color: #ff7f00;
     }
-    
-    .nav-bar a{
+    .nav-bar a {
         width: 50%;
     }
     body.menu-open .nav-bar {
         transform: translateX(0);
         box-shadow: -8px 0px 20px rgb(0 0 0 / 20%);
     }
-
 }
