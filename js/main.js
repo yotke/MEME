@@ -8,6 +8,7 @@ var gTextClicked = true;
 function onInit() {
     gElCanvas = document.querySelector('#canvas');
     gCtx = gElCanvas.getContext('2d');
+    renderCanvas();
     renderPicturesToGallery();
     addListeners();
 }
