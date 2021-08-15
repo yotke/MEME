@@ -19,9 +19,9 @@ body {
 
 .canvas-container {
     /* align-items: center; */
-    justify-content: center;
+    /* justify-content: center; */
     /* margin: 0 50px; */
-    padding: 30px 47px;
+    /* padding: 30px 47px; */
 }
 
 #canvas:hover {
@@ -265,4 +265,10 @@ body {
     .meme-copy-container .btn:hover {
         width: 60px;
     }
+
+#canvas{
+    align-self: center;
+    width: 200px;
+    height: 200px;
+}
 }
