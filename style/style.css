@@ -153,6 +153,13 @@ body {
 }
 
 @media (max-width: 800px) {
+    .logo {
+        height: 20px;
+        align-items: center;
+   
+    }
+
+
     .search-input-bar {
         display: flex;
         flex-direction: column;
