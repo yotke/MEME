@@ -154,7 +154,7 @@ body {
 
 @media (max-width: 800px) {
     .logo {
-        width: 30px;
+        width: 100px;
         height: 20px;
         align-items: center;
    
