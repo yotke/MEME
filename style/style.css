@@ -228,7 +228,7 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .logo {
         width: 100px;
         height: 20px;
