@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/gallery.css">
+
     <link rel="stylesheet" href="style/helpers.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Memegen</title>
@@ -39,16 +41,15 @@
                         <input type="text" value="Enter Search keyword" id="meme-search"
                             onchange="setSearchText(this.value)">
                         <img class="search-icon" src="ICONS/search-icon.png" alt="">
+
                     </div>
                 </div>
-                <div>
-                    <div id="searches-bar">
-                        <button class="happey" onclick="onPushSearchesBtn(this)">happey</button>
-                        <button class="funny" onclick="onPushSearchesBtn(this)">funny</button>
-                        <button class="comics" onclick="onPushSearchesBtn(this)">comics</button>
-                        <button class="dog" onclick="onPushSearchesBtn(this)">dog</button>
-                        <button class="books" onclick="onPushSearchesBtn(this)">books</button>
-                        </div>
+                <div id="searches-bar">
+                    <button class="happey" onclick="onPushSearchesBtn(this)">happey</button>
+                    <button class="funny" onclick="onPushSearchesBtn(this)">funny</button>
+                    <button class="comics" onclick="onPushSearchesBtn(this)">comics</button>
+                    <button class="dog" onclick="onPushSearchesBtn(this)">dog</button>
+                    <button class="books" onclick="onPushSearchesBtn(this)">books</button>
                 </div>
             </div>
             <div class="photo-container"></div>
@@ -60,8 +61,7 @@
                 <div id="canvas-bar">
                     <!-- <label for="meme-text">Color:</label> -->
                     <div class="text-input">
-                        <input type="text" value="" id="meme-text"
-                            onchange="onChangeCanTxtInput(this.value)">
+                        <input type="text" value="" id="meme-text" onchange="onChangeCanTxtInput(this.value)">
                     </div>
                     <div class="text-btn-container">
                         <button class="btn move-text-up" onclick="onMoveUp()"><img class="arrows"
@@ -101,14 +101,15 @@
                     </div>
                     <div class="emoji-container">emojis</div>
                     <div class="meme-copy-container">
-                       <button class="btn save-btn" onclick="onSave()">Save</button>
+                        <button class="btn save-btn" onclick="onSave()">Save</button>
                         <button class="btn share-btn">Share</button>
-                        <a href="saved-imgs/" download="canvas-draw.png" onclick="onDownload(this)"><button class="btn download-btn">download</button></a>
+                        <a href="saved-imgs/" download="canvas-draw.png" onclick="onDownload(this)"><button
+                                class="btn download-btn">download</button></a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="save" class ="hidde">
+        <section id="save" class="hidde">
             <div class="saved-memes-container">
                 <canvas id="canvas-saved" width="3000" height="3000"></canvas>
             </div>

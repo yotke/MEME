@@ -7,81 +7,9 @@ body {
     font-family: "Montserrat";
 }
 
-
 /* MAIN */
 
 /* SECTION1 */
-
-/* GALLERY */
-
-.search-input-bar {
-    display: flex;
-    height: 105px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 47px;
-}
-
-#searches-bar {
-    display: flex;
-}
-
-#searches-bar>* {
-    margin: 10px;
-    padding: 15px;
-    background-color: inherit;
-    font-size: 1.5rem;
-    font-family: monospace;
-    border: none;
-}
-
-#searches-bar>*:hover {
-    transform: rotate(-30deg);
-}
-
-#meme-search {
-    border: none;
-    font-size: 19px;
-    color: #7a7a7a;
-    font-weight: 500;
-}
-
-.photo-container {
-    background-color: #e3e3e3;
-    padding: 25px 0px 0px 0px;
-}
-
-/* FOOTER */
-
-.footer-container {
-    padding: 75px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 246px;
-    background-color: #ff7f00;
-}
-
-.color-img {
-    max-width: 50px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 15px;
-}
-
-.font-color {
-    padding: 3px;
-    border: none;
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    mix-blend-mode: hue;
-}
-
-.main-container img, input {
-    height: unset;
-}
 
 /* EDITOR */
 
@@ -224,13 +152,20 @@ body {
     background-color: #ff7f00;
 }
 
-
-
-@media (max-width: 700px) {
-    /* .text-btn-container{
-        height: 50%;
-        width: 50%;
-    } */
+@media (max-width: 800px) {
+    .search-input-bar {
+        display: flex;
+        flex-direction: column;
+    }
+    #searches-bar {
+        display: flex;
+    }
+    #searches-bar>* {
+        margin: 5px;
+        padding: 5px;
+        font-size: 1rem;
+        font-family: monospace;
+    }
     .canvas-container {
         flex-direction: column;
         gap: 10px
