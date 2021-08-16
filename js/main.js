@@ -276,6 +276,7 @@ function onPushSearchesBtn(elBtn){
     }
     else{
         var size =parseInt(elBtn.style.fontSize)+1;
+        if(size>5) size =2;
         elBtn.style.fontSize = size+'rem'
     }
     setSearchText(elBtn.innerText);
