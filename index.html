@@ -52,8 +52,8 @@
                     <button class="books" onclick="onPushSearchesBtn(this)">books</button>
                 </div>
             </div>
-            
-            <div class="photo-container"><div class="add-photo-container"><button class="add-photo-btn">browser</div></button></div>
+            <!-- <div class="add-photo-container"><button class="add-photo-btn">browser</button></div> -->
+            <div class="photo-container"></div>
         </section>
         <section class="canvas-editor hidde" id="editor">
             <div class="canvas-container flex">
@@ -65,8 +65,10 @@
                         <input type="text" value="" id="meme-text" placeholder="meme text" oninput="drawInputText(this)" onchange="onChangeCanTxtInput(this)">
                     </div>
                     <div class="text-btn-container">
-                        <button class="btn move-text-up" onclick="onMoveUp()"><img class="arrows"
+                        <button class="btn move-text-up" onclick="onChangeSelect()"><img class="arrows"
                                 src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
+                        <!-- <button class="btn move-text-up" onclick="onMoveUp()"><img class="arrows"
+                                src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button> -->
                         <!-- <button class="btn move-text-down" onclick="onMoveDown()">Arrow down</button> -->
                         <button class="btn move-text-down" onclick="onPlasPush()"><img class="plas-img"
                                 src="ICONS/add.png" alt=""></button>
