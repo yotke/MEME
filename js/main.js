@@ -1,7 +1,7 @@
 'use strict'
 
 
-var gSavedImg;
+var gSavedImg=[];
 var gElCanvas;
 var gCtx;
 const gTouchEvs = ['touchstart', 'touchmove', 'touchend'];
@@ -18,9 +18,6 @@ function toggleMenu() {
 function onInit() {
     gElCanvas = document.querySelector('#canvas');
     gCtx = gElCanvas.getContext('2d');
-    // renderCanvas();
-    // renderImojis();
-    // addListeners();
     var imgs = getImgs();
     renderPicturesToGallery(imgs);
 
@@ -52,11 +49,13 @@ function renderLines() {
 function renderLine(line) {
     gCtx.font = line.size + 'px' + ' ' + line.style;
     gCtx.fillStyle = line.color;
-    var y = line.pos.y;
-    var x = line.pos.x;
+    const y = line.pos.y;
+    var x ;
     var textWidth = gCtx.measureText(line.txt).width;
+    if (line.align === 'left') x = line.pos.x;
+    else if (line.align === 'middle') x = line.pos.x + 400 - textWidth;
+    else if (line.align === 'right') x = line.pos.x + 540 - textWidth;
     gCtx.fillText(line.txt, x, y)
-    var textWidth = gCtx.measureText(line.txt).width;
     updateTextWidth(line, textWidth);
 }
 
@@ -74,13 +73,13 @@ function renderPicturesToGallery(imgs) {
 // RENDER IMOJIS TO IMOJI CONTAINER.
 
 function renderImojis() {
-    var elImojiContainer = document.querySelector('.emoji-container')
-    var strHTML = '';
-    console.log('woww');
-    emojis.forEach(emoji => {
-        strHTML += `<button class="button-imoji" onclick="renderEmojiToCanvas()">${emoji}</button>`
-    });
-    elImojiContainer.innerHTML = strHTML;
+    // var elImojiContainer = document.querySelector('.emoji-container')
+    // var strHTML = '';
+    // console.log('woww');
+    // emojis.forEach(emoji => {
+    //     strHTML += `<button class="button-imoji" onclick="renderEmojiToCanvas()">${emoji}</button>`
+    // });
+    // elImojiContainer.innerHTML = strHTML;
 }
 
 // RENDER SAVED MEMES TO SAVED GALLERY
@@ -287,6 +286,17 @@ function downloadImg(elLink) {
     var imgContent = gElCanvas.toDataURL('')
     elLink.href = imgContent
 }
+
+function onChangeSelect(){
+    const meme = getMeme();
+    !meme.selectedLineIdx?meme.selectedLineIdx=0:meme.selectedLineIdx+=1;
+    SetborderSelectedItem()
+    var posVec = getBoderBoxPos();
+    renderCanvas();
+    drawRectangle(posVec);
+}
+
+
 
 // HELPER TO CREATE BOX AROUND TEXT LINES.
 function drawRectangle(pos, color = 'white', pattern = [20, 3, 3, 3, 3, 3, 3, 3]) {
