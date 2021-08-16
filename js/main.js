@@ -63,7 +63,7 @@ function renderLine(line) {
 // RENDER ALL KIND OF PICTURE TO OUR GALLERY.
 function renderPicturesToGallery(imgs) {
     var elImgContainer = document.querySelector('.photo-container');
-    elImgContainer.innerHTML;
+    elImgContainer.innerHTML='';
     for (let i = 0; i < imgs.length; i++) {
         elImgContainer.innerHTML += `<a href="#editor" class="photo" onclick="onSetPicInCanvas(this,${imgs[i].id})"><img src="${imgs[i].url}" alt=""></a>`
     }

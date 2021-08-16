@@ -98,16 +98,16 @@ body {
 
 .meme-copy-container .btn {
     color: white;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     font-size: 0.8rem;
-    width: 80px;
+    width: 110px;
     background-color: #ff7f00;
     transition: All 0.3s ease;
 }
 
 .meme-copy-container .btn:hover {
     background-color: #cc6b09;
-    width: 95px;
+    width: 115px;
 }
 
 .color-img {

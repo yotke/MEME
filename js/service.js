@@ -138,8 +138,10 @@ function setSearchTextService(keywords) {
         return gImgs;
     }
     var imgs = gImgs.filter(img => {
+        console.log('img.keywords[0]',img.keywords[0]);
         return img.keywords[0] === keywords;
     });
+    console.log('imgs',imgs);
     if (imgs.length === 0 && keywords === '')
         return;
     return imgs;
